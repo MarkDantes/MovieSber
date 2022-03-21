@@ -3,7 +3,7 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <span className="header">📽️Movies</span>
+    <span onClick={()=>window.scroll(0,0)} className="header">📽️ Movies 🍿</span>
   )
 }
 
