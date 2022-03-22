@@ -17,7 +17,8 @@ export default function SimpleBottomNavigation() {
   if (value === 0)
       navigate("/");
       else if(value === 1 ) navigate("/movies");
-      else if(value === 2 ) navigate("/profile");
+      else if(value === 2 ) navigate("/login");
+      
      
    
   }, [value, navigate]);

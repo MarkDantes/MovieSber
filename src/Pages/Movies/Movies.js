@@ -40,7 +40,7 @@ const [numOfPages, setNumOfPages] = useState();
         }
         </div>
         {numOfPages >1 &&  (
-        <CustomPagination setPage={setPage} numOfPages={numOfPages} /> ) }
+        <CustomPagination setPage={setPage} numOfPages={500} /> ) }
     </div>
   )
 }
