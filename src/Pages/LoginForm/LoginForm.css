@@ -1,9 +1,11 @@
+.container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
 
 .loginButton {
-    display: flex;
-    position: flex;
     width: 400px;
-    flex-direction: column;
     background: #032541;
     color: #fff;
     padding: 12px;
@@ -25,7 +27,6 @@
 
 .LoginForm{
     display: flex;
-    
     width: 400px;
     position: flex;
     flex-direction: column;

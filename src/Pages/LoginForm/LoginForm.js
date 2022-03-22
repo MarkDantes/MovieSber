@@ -35,7 +35,9 @@ const LoginForm = () => {
     localStorage.setItem('user', 'admin');
   };
 
+
   return (
+    <div className="container">
     <form onSubmit={handleSubmit} className="LoginForm" id="LoginForm">
       <Input
         placeholder="Введите логин"
@@ -57,7 +59,9 @@ const LoginForm = () => {
         Войти в профиль
       </button>
     </form>
+    </div>
   );
+
 };
 
 export default LoginForm;
