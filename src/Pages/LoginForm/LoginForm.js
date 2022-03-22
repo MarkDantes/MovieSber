@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useState } from 'react';
-
-
+import './LoginForm.css'
 
 const Input = ({ placeholder, value, onChange, name, id, labelName }) => {
   return (
