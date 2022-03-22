@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from 'react';
 import './LoginForm.css'
+import { useNavigate } from "react-router-dom";
 
 const Input = ({ placeholder, value, onChange, name, id, labelName }) => {
   return (
@@ -24,17 +25,18 @@ const customInputHandler = (e, setFunction) => setFunction(e.target.value);
 const LoginForm = () => {
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (login === '' || password === '') return alert('Заполните все поля!');
-    if (login !== 'admin' && password !== 12345)
+    if (login !== 'Admin' && password !== 12345)
       return alert('Данные введены неправильно!');
 
-    localStorage.setItem('user', 'admin');
+    localStorage.setItem('user', 'Admin');
+    navigate('/profile');
   };
-
 
   return (
     <div className="container">

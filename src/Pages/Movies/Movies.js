@@ -24,7 +24,7 @@ const [numOfPages, setNumOfPages] = useState();
 
     return (
     <div>
-        <span className = "pageTitle">Movies</span>
+        <span className = "pageTitle">Фильмы</span>
         
         <div className="mostViewed">
         {

@@ -13,14 +13,15 @@ export default function SimpleBottomNavigation() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    
-  if (value === 0)
-      navigate("/");
-      else if(value === 1 ) navigate("/movies");
-      else if(value === 2 ) navigate("/login");
-      
-     
-   
+    if (value === 0) navigate('/');
+    else if (value === 1) navigate('/movies');
+    else if (value === 2) {
+      if (!localStorage.getItem('user')) {
+        navigate('/login');
+      } else {
+        navigate('/profile');
+      }
+    }
   }, [value, navigate]);
   
   return (
@@ -32,9 +33,9 @@ export default function SimpleBottomNavigation() {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-        <BottomNavigationAction label="Movies" icon={<MovieIcon />} />
-        <BottomNavigationAction label="Profile" icon={<AccountBoxIcon />} />
+        <BottomNavigationAction label="Главная" icon={<HomeIcon />} />
+        <BottomNavigationAction label="Фильмы" icon={<MovieIcon />} />
+        <BottomNavigationAction label="Профиль" icon={<AccountBoxIcon />} />
       </BottomNavigation>
     </Box>
   );

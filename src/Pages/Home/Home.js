@@ -24,7 +24,7 @@ const Home = () => {
 
     return (
     <div>
-        <span className = "pageTitle">Home</span>
+        <span className = "pageTitle">Главная</span>
         <div className="mostViewed">
         {
         content && content.map((c)=>(<SingleContent 
